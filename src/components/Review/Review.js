@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
+import {withRouter} from 'react-router-dom'
 
-import './App.css';
+import '../App/App.css';
 
 class Review extends Component {
   render() {
     return (
       <div>
-        <button>SUBMIT</button>
+        <h1>Review Your Feedback</h1>
+        <button onClick = {()=>{this.props.history.push('/submission')}}>SUBMIT</button>
       </div>
     );
   }
 }
 
-export default Review;
+export default withRouter(Review);
