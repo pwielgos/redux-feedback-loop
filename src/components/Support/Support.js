@@ -1,25 +1,43 @@
 import React, { Component } from 'react';
-import {withRouter} from 'react-router-dom'
-
+import {withRouter} from 'react-router-dom';
 import '../App/App.css';
+import { connect } from 'react-redux';
 
 class Support extends Component {
+  state = {
+    selectedOption: ''
+  };
+
+  handleChange = (event) => {
+    this.setState({
+      selectedOption: event.target.value,
+    });
+    console.log('selected support option is', this.state.selectedOption);
+  }
+
+  submitForm = () => {
+    let supportSelection = this.state.selectedOption;
+    this.props.dispatch({
+      type: 'SET_SUPPORT',
+      payload: supportSelection
+    })
+    this.props.history.push('/comments')
+  }
+
   render() {
     return (
       <div>
         <h1>How well are you being supported?</h1>
         <h4>Support?</h4>
-        <select >
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <button onClick = {()=>{this.props.history.push('/comments')}}>NEXT</button>
+      <input type="number" onChange={this.handleChange}/>
+        <button onClick={this.submitForm}>NEXT</button>
       </div>
     );
   }
 }
 
-export default withRouter(Support);
+const mapStateToProps = (reduxStore) => ({
+  reduxStore
+})
+
+export default withRouter(connect(mapStateToProps)(Support));
