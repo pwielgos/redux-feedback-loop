@@ -8,7 +8,6 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
 const feelingReducer = (state = [], action) => {
-    console.log('hello from feelingReducer-index');
     if (action.type === 'SET_FEELING') {
         return action.payload;
     }
@@ -16,7 +15,6 @@ const feelingReducer = (state = [], action) => {
 }
 
 const understandingReducer = (state = [], action) => {
-    console.log('hello from understandingReducer-index');
     if (action.type === 'SET_UNDERSTANDING') {
         return action.payload;
     }
@@ -24,7 +22,6 @@ const understandingReducer = (state = [], action) => {
 }
 
 const supportReducer = (state = [], action) => {
-    console.log('hello from supportReducer-index');
     if (action.type === 'SET_SUPPORT') {
         return action.payload;
     }
@@ -32,7 +29,6 @@ const supportReducer = (state = [], action) => {
 }
 
 const commentsReducer = (state = [], action) => {
-    console.log('hello from commentsReducer-index');
     if (action.type === 'SET_COMMENTS') {
         return action.payload;
     }

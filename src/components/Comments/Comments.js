@@ -12,7 +12,6 @@ class Comments extends Component {
     this.setState({
       commentsOption: event.target.value,
     });
-    console.log('comments option is', this.state.commentsOption);
   }
 
   submitForm = () => {

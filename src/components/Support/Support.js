@@ -12,7 +12,6 @@ class Support extends Component {
     this.setState({
       selectedOption: event.target.value,
     });
-    console.log('selected support option is', this.state.selectedOption);
   }
 
   submitForm = () => {

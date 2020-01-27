@@ -12,7 +12,6 @@ class Feeling extends Component {
     this.setState({
       selectedOption: event.target.value,
     });
-    console.log('selected feeling option is', this.state.selectedOption);
   }
 
   submitForm = () => {

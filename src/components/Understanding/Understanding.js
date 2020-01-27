@@ -12,7 +12,6 @@ class Understanding extends Component {
     this.setState({
       selectedOption: event.target.value,
     });
-    console.log('selected understanding option is', this.state.selectedOption);
   }
 
   submitForm = () => {
