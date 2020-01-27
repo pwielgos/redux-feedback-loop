@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import '../App/App.css';
 import { connect } from 'react-redux';
 
@@ -30,7 +30,7 @@ class Comments extends Component {
       <div>
         <h1>Any comments you want to leave?</h1>
         <h4>Comments?</h4>
-        <input type="text" onChange={this.handleChange}/>
+        <input type="text" onChange={this.handleChange} />
         <button onClick={this.submitForm}>NEXT</button>
       </div>
     );

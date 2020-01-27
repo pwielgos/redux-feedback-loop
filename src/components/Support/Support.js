@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import '../App/App.css';
 import { connect } from 'react-redux';
 
@@ -29,7 +29,7 @@ class Support extends Component {
       <div>
         <h1>How well are you being supported?</h1>
         <h4>Support?</h4>
-      <input type="number" onChange={this.handleChange}/>
+        <input type="number" onChange={this.handleChange} />
         <button onClick={this.submitForm}>NEXT</button>
       </div>
     );

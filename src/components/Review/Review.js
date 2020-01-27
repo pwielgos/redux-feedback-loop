@@ -5,10 +5,7 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 
 class Review extends Component {
-
   handleSubmit = () => {
-    console.log(`Adding result`, this.props.reduxStore);
-    
     axios.post(`/feedback`, this.props.reduxStore)
       .then((response) => {
         console.log('response', response);
